@@ -5,8 +5,36 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background: #010101;
+    background: radial-gradient(circle at center, #0ff 0%, #010101 70%);
     font-family: Arial, sans-serif;
+}
+
+/* Efecto de resplandor en el cubo */
+.cube-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    background: rgba(0, 123, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* leve resplandor */
+}
+
+/* Versión más chica para móviles */
+@media (max-width: 600px) {
+    .scene {
+        width: 150px;
+        height: 150px;
+    }
+    .cube-face {
+        width: 150px;
+        height: 150px;
+        font-size: 1.5em;
+    }
 }
 
 .scene {
@@ -22,19 +50,6 @@ body {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 1s;
-}
-
-.cube-face {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border: 2px solid white;
-    background: rgba(0, 123, 255, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: white;
 }
 
 .front { transform: translateZ(100px); }
