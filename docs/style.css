@@ -57,6 +57,28 @@ body {
     transition: all 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+    .scene {
+        width: 150px; /* cubo más chico para pantallas pequeñas */
+        height: 150px;
+    }
+    .cube-face {
+        width: 150px;
+        height: 150px;
+        font-size: 1.5em;
+    }
+    .girar-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
 
 .girar-btn:hover {
     background: #ff6b81;

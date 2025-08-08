@@ -40,4 +40,5 @@ function girarCubo() {
     }, 1000);
 }
 
+
 girarBtn.addEventListener('click', girarCubo);
