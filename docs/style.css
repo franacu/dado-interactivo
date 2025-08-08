@@ -21,7 +21,7 @@ body {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1); /* Suavizado */
+    transition: transform 1s;
 }
 
 .cube-face {
@@ -37,7 +37,6 @@ body {
     color: white;
 }
 
-/* Posiciones de las caras */
 .front { transform: translateZ(100px); }
 .back { transform: rotateY(180deg) translateZ(100px); }
 .right { transform: rotateY(90deg) translateZ(100px); }
@@ -45,48 +44,22 @@ body {
 .top { transform: rotateX(90deg) translateZ(100px); }
 .bottom { transform: rotateX(-90deg) translateZ(100px); }
 
-/* Estilo del botón */
-.girar-btn {
-    padding: 15px 30px;
-    background: #ff4757;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.2em;
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
     cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.scene {
-    width: 200px;
-    height: 200px;
-    perspective: 600px;
-    margin-bottom: 40px;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-@media (max-width: 600px) {
-    .scene {
-        width: 150px; /* cubo más chico para pantallas pequeñas */
-        height: 150px;
-    }
-    .cube-face {
-        width: 150px;
-        height: 150px;
-        font-size: 1.5em;
-    }
-    .girar-btn {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-}
-
-.girar-btn:hover {
-    background: #ff6b81;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.girar-btn:disabled {
-    background: #7f8c8d;
-    cursor: not-allowed;
+button:hover {
+    background: #0056b3;
 }
