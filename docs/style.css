@@ -1,0 +1,68 @@
+body
+    {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background: #010101 ;
+        font-family: Arial, sans-serif;
+    }
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+}
+.cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.cube-fase{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    background: rgba(0, 123,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em; color: white;
+    backface-visibility: hidden;
+}
+
+/*front-face*/
+.front { transform: translateZ(100px);}
+/*back-face*/
+.back { transform: rotateY(180deg) translateZ(100px);}
+/*right-face*/
+.right { transform: rotateY(90deg) translateZ(100px);}
+/*left-face*/
+.left { transform: rotateY(-90deg) translateZ(100px);}
+/*top-face*/
+.top { transform: rotateX(90deg) translateZ(100px);}
+/*bottom-face*/
+.bottom { transform: rotateY(-90deg) translateZ(100px);}
+
+.controls {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+bottom {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button :hover {
+    background: #0056b3;
+}
