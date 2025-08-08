@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">  <!-- Cambiado: sin docs/ -->
     <title>Dado Interactivo</title>
     <style>
         #dado {
@@ -27,15 +28,8 @@
     <div id="dado">TOCAME</div>
     <div id="opciones"></div>
 
-    <script>
-        const dado = document.getElementById('dado');
-        const opcionesDiv = document.getElementById('opciones');
-        const opciones = ["Opción 1", "Opción 2", "Opción 3", "Opción 4", "Opción 5", "Opción 6"];
-
-        dado.addEventListener('click', () => {
-            const resultado = opciones[Math.floor(Math.random() * opciones.length)];
-            opcionesDiv.textContent = `Resultado: ${resultado}`;
-        });
-    </script>
+    <!-- Movido al final del body y cambiada la ruta -->
+    <script src="script.js"></script>  <!-- Cambiado: sin docs/ -->
 </body>
 </html>
+
