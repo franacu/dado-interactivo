@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">  <!-- Cambiado: sin docs/ -->
-    <title>Dado Interactivo</title>
-    <style>
-        #dado {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            margin: 50px auto;
-            color: white;
-            font-size: 24px;
-        }
-        #opciones {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Cubo 3D Interactivo</title>
 </head>
 <body>
-    <div id="dado">TOCAME</div>
-    <div id="opciones"></div>
+    <div class="scene">
+        <div class="cube" id="cube">
+            <div class="cube-face front">1</div>
+            <div class="cube-face back">2</div>
+            <div class="cube-face right">3</div>
+            <div class="cube-face left">4</div>
+            <div class="cube-face top">5</div>
+            <div class="cube-face bottom">6</div>
+        </div>
+    </div>
 
-    <!-- Movido al final del body y cambiada la ruta -->
-    <script src="script.js"></script>  <!-- Cambiado: sin docs/ -->
+    <div class="controls">
+        <button onclick="rotateCube('left')">Izquierda</button>
+        <button onclick="rotateCube('right')">Derecha</button>
+        <button onclick="rotateCube('up')">Arriba</button>
+        <button onclick="rotateCube('down')">Abajo</button>
+        <button onclick="reset()">Reiniciar</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
